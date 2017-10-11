@@ -1,8 +1,10 @@
 ### guava 
+
 ---
 
 #### 字符操作
 
+Joiner Splitter 操作类
 ```java
 public class JoinerAndSplitter {
 
@@ -49,7 +51,7 @@ public class JoinerAndSplitter {
 
 ```
 
-
+过滤字符，过滤字符中的数字 or 保留数字
 ```java
 public class CharMatcherDemo {
 
