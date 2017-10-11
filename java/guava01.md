@@ -6,7 +6,7 @@
 
 Joiner Splitter 操作类
 ```java
-//key:字符操作
+//key: java.string
 public class JoinerAndSplitter {
 
 	public static void main(String[] args) {
