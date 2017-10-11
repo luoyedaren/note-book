@@ -5,3 +5,5 @@
    2. jdbc 连接加上 `?useUnicode=true&characterEncoding=utf-8`
    3. mysql 配置 **utf-8** `/etc/my.cnf　,在[mysql]段加入default_character_set=utf8`
    4. 确保字段上的编码没有手误建成非utf-8格式, 修正方法 `ALTER TABLE `table_name` CHANGE `column` `column` VARCHAR( 长度 ) CHARACTER SET utf8 DEFAULT NULL `
+   
+   
