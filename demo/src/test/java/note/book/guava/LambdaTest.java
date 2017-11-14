@@ -12,7 +12,7 @@ import java.util.function.Predicate;
  * project: note-book
  * Created by chenghai on 2017/11/14. - 星期二
  */
-public class OptionalTest {
+public class LambdaTest {
 	@Test
 	public void one() throws Exception {
 		User u = new User();
