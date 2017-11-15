@@ -3,6 +3,10 @@ package note.book.guava;
 import note.book.domain.User;
 import org.junit.Test;
 
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.Month;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -51,5 +55,23 @@ public class LambdaTest {
 				System.out.println(integer);
 			}
 		});
+	}
+
+	@Test
+	public void four() throws Exception {
+		LocalDateTime localDateTime = LocalDateTime.now();
+		System.out.println(localDateTime);
+		System.out.println(localDateTime.toLocalDate());
+		System.out.println(localDateTime.toLocalTime());
+		System.out.println(localDateTime.getMonth());
+		System.out.println(localDateTime.getDayOfMonth());
+
+		LocalDateTime localDateTime1 = localDateTime.withDayOfMonth(10).withYear(2010);
+		System.out.println(localDateTime1);
+
+		LocalDate localDate = LocalDate.of(2014, Month.DECEMBER, 12);
+		System.out.println(localDate);
+		LocalDate parse = LocalDate.parse("2017-10-10");
+		System.out.println(parse);
 	}
 }
