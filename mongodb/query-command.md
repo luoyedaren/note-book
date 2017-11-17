@@ -24,3 +24,12 @@ db.getCollection('customerReport').aggregate([
     
 ])
 ```
+
+- 去重
+```js
+总数，去重
+db.customer.distinct('phone' //去重字段
+,{'createTime':{'$gte':'20170915','$lte':'20170929'} //查询
+
+}).length
+```
