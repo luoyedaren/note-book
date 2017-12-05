@@ -8,6 +8,9 @@
     - [optional_01](base/optional01.md)
     - [collect_01收集器](base/lamada02.md)
     
+参考资源:  
+>- http://www.baeldung.com/java8#101
+    
 - http请求
     - [请求参数类型导致400 bad request](base/http01.md)
     - [修改request里面的参数值的方法](base/httpRequest.md)
