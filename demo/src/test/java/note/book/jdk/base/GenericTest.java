@@ -1,7 +1,11 @@
 package note.book.jdk.base;
 
+import com.google.common.collect.Lists;
 import note.book.domain.User;
 import org.junit.Test;
+
+import java.util.Collections;
+import java.util.List;
 
 /**
  * project: note-book
@@ -15,6 +19,31 @@ public class GenericTest {
 		Container<User> userContainer = new Container<>(new User("mike"));
 		User conatiner = userContainer.getConatiner();
 		System.out.println(conatiner);
+	}
+
+	//方法泛型化
+	public <E> String get(List<E> t) {
+		String s = "";
+		t.forEach(t1 -> {
+			System.out.println(t1);
+			s.concat(t1.toString());
+
+		});
+		return s;
+	}
+
+	public <E> List getTwo(String s, List<E> list1) {
+		list1.size();
+		return list1;
+	}
+
+	@Test
+	public void three() throws Exception {
+		List a = getTwo("a", Collections.emptyList());
+		System.out.println(a);
+		List list1 = Lists.newArrayList(new User("mike"), new User("tome"));
+		getTwo("", list1);
+		System.out.println(getTwo("", list1));
 	}
 }
 
