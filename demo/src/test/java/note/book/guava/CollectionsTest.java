@@ -1,5 +1,6 @@
 package note.book.guava;
 
+import com.google.common.collect.*;
 import org.junit.Test;
 
 /**
@@ -20,6 +21,37 @@ public class CollectionsTest {
 
 	@Test
 	public void one() throws Exception {
+		// key->HashMap value->HashSet
+		Multimap multimap = HashMultimap.create();
+		multimap.put("one", 1);
+		multimap.put("one", 2);
+		System.out.println(multimap);
+		multimap.get("one").stream().forEach(o -> System.out.println(o));
+	}
 
+	@Test
+	public void two() throws Exception {
+		// 双向map
+		//bimap key和value都不可重复，key value等价,
+		//适合场景：需要根据value反推key
+		BiMap biMap = HashBiMap.create();
+		biMap.put("one", 1);
+		biMap.put("two", 2);
+		System.out.println(biMap.inverse().get(2));
+
+	}
+
+	@Test
+	public void three() throws Exception {
+		//不是set集合  放入重复元素，会存入重复元素的次数
+		//[tom, mike x 3, jack] mike放了三次
+		Multiset<String> multiset = HashMultiset.create();
+		multiset.add("mike");
+		multiset.add("jack");
+		multiset.add("mike");
+		multiset.add("tom");
+		multiset.add("mike");
+		System.out.println(multiset);
+		System.out.println(multiset.count("mike"));
 	}
 }
